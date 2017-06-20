@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CopiaChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bph-9n-TPQ">
+                                <rect key="frame" x="0.0" y="60" width="320" height="420"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xa-Up-8by">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBb-ve-LsK">
+                                        <rect key="frame" x="260" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="KJ2-a5-nOW"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="replay"/>
+                                        <connections>
+                                            <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pE6-tf-wKY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KBb-ve-LsK" firstAttribute="centerY" secondItem="3xa-Up-8by" secondAttribute="centerY" id="Ozt-o6-Cnu"/>
+                                    <constraint firstAttribute="trailing" secondItem="KBb-ve-LsK" secondAttribute="trailing" id="awh-e6-iZm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFq-00-cJj">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="jsk-IM-tcI"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="play">
+                                    <color key="titleColor" red="0.8980392157" green="0.40784313729999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="animationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJH-X8-kcS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bph-9n-TPQ" secondAttribute="trailing" id="280-sO-gPb"/>
+                            <constraint firstItem="3xa-Up-8by" firstAttribute="trailing" secondItem="bph-9n-TPQ" secondAttribute="trailing" id="69v-iT-23j"/>
+                            <constraint firstItem="3xa-Up-8by" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BKw-Xg-oDv"/>
+                            <constraint firstItem="OFq-00-cJj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NqU-ys-sqn"/>
+                            <constraint firstItem="bph-9n-TPQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="O0O-Ky-K1K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bph-9n-TPQ" secondAttribute="bottom" id="PYc-0s-LNb"/>
+                            <constraint firstItem="OFq-00-cJj" firstAttribute="leading" secondItem="3xa-Up-8by" secondAttribute="leading" id="RB5-bk-yb6"/>
+                            <constraint firstItem="OFq-00-cJj" firstAttribute="centerY" secondItem="3xa-Up-8by" secondAttribute="centerY" id="Tau-xD-Is2"/>
+                            <constraint firstItem="bph-9n-TPQ" firstAttribute="top" secondItem="3xa-Up-8by" secondAttribute="bottom" constant="-1" id="eo6-DP-Afj"/>
+                            <constraint firstItem="3xa-Up-8by" firstAttribute="leading" secondItem="bph-9n-TPQ" secondAttribute="leading" id="kKR-B0-tzN"/>
+                            <constraint firstItem="bph-9n-TPQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p77-4c-gJ5"/>
+                            <constraint firstItem="KBb-ve-LsK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pmm-ZP-3QJ"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="animationControlButton" destination="OFq-00-cJj" id="hXo-xT-5ac"/>
+                        <outlet property="mapView" destination="bph-9n-TPQ" id="YQM-IL-fXm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="24" height="24"/>
+        <image name="replay" width="24" height="24"/>
+    </resources>
+</document>
